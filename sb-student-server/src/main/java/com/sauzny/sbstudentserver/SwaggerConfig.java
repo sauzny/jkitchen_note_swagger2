@@ -32,8 +32,8 @@ public class SwaggerConfig {
 
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()
-				.title("Hello系统api")
-				.description("Hello系统接口文档说明")
+				.title("student系统api")
+				.description("student系统接口文档说明")
 				.contact(new Contact("sauzny", "", "xinxin_949421@126.com"))
 				.version("1.0")
 				.build();
