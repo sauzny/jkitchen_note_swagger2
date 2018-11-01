@@ -1,0 +1,25 @@
+# https://cloud.spring.io/spring-cloud-static/Finchley.RELEASE/single/spring-cloud.html#_spring_cloud_gateway
+
+server.port: 38080
+
+spring: 
+  cloud: 
+    gateway: 
+      routes:
+      # =====================================
+      - id: service_to_school
+        uri: http://localhost:18080
+        order: 1000
+        predicates:
+        - Path=/school/**
+        filters:
+        - PrefixPath=/api
+      # =====================================
+      - id: service_to_student
+        uri: http://localhost:28080
+        order: 1000
+        predicates:
+        - Path=/student/**
+        filters:
+        - PrefixPath=/api
+      
