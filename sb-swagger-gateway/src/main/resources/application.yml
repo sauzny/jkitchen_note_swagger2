@@ -1,0 +1,5 @@
+
+server.port: 48080
+
+rest.api.names: school, student 
+rest.api.paths: http://localhost:18080, http://localhost:28080
