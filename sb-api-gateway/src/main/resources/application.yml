@@ -2,6 +2,8 @@
 
 server.port: 38080
 
+rest.api.names: school, student 
+
 spring: 
   cloud: 
     gateway: 
