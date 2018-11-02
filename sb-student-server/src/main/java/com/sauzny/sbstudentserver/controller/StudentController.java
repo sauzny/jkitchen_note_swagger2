@@ -9,7 +9,7 @@ import io.swagger.annotations.ApiOperation;
 
 @Api("学生服务")
 @RestController
-@RequestMapping(value="/api/student/v1")
+@RequestMapping(value="/students")
 public class StudentController {
 
 	@GetMapping()

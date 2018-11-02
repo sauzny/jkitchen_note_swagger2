@@ -13,17 +13,13 @@ spring:
         uri: http://localhost:18080
         order: 1000
         predicates:
-        - Path=/school/**
-        filters:
-        - PrefixPath=/api
+        - Path=/schools/**
       # =====================================
       - id: service_to_student
         uri: http://localhost:28080
         order: 1000
         predicates:
-        - Path=/student/**
-        filters:
-        - PrefixPath=/api
+        - Path=/students/**
       # =====================================
       - id: service_to_school_openapi
         uri: http://localhost:18080
