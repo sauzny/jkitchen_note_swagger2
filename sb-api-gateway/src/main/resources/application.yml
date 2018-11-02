@@ -2,7 +2,7 @@
 
 server.port: 38080
 
-rest.api.names: school, student 
+rest.api.names: school,student 
 
 spring: 
   cloud: 
@@ -24,4 +24,20 @@ spring:
         - Path=/student/**
         filters:
         - PrefixPath=/api
+      # =====================================
+      - id: service_to_school_openapi
+        uri: http://localhost:18080
+        order: 1000
+        predicates:
+        - Path=/openapi/school/**
+        filters:
+        - StripPrefix=2
+      # =====================================
+      - id: service_to_student_openapi
+        uri: http://localhost:28080
+        order: 1000
+        predicates:
+        - Path=/openapi/student/**
+        filters:
+        - StripPrefix=2
       
